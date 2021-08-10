@@ -1,4 +1,7 @@
 let 鍵盤 = 0
+music.setBuiltInSpeakerEnabled(false)
+pins.setAudioPin(AnalogPin.P0)
+basic.clearScreen()
 basic.forever(function () {
     鍵盤 = pins.analogReadPin(AnalogPin.P2)
     if (鍵盤 < 60) {
@@ -32,7 +35,7 @@ basic.forever(function () {
     } else if (鍵盤 < 900) {
         music.ringTone(988)
     } else if (鍵盤 < 960) {
-        music.ringTone(1046)
+        music.ringTone(1046.50)
     } else {
         music.stopAllSounds()
     }
